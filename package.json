@@ -1,0 +1,38 @@
+{
+  "name": "spotlight-interaction-platform",
+  "version": "1.0.0",
+  "author": "Rahul Dange",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "dev": "lerna run dev --stream",
+    "prepare": "husky install",
+    "postinstall": "node scripts/postinstall/fix-next-jsonwebtoken.js && node scripts/postinstall/fix-next-jsonwebtoken2.js && node scripts/postinstall/fix-buffer-eq.js",
+    "lint": "lerna run lint",
+    "ts:check": "lerna run ts:check",
+    "create-super-admin": "node ./packages/api/createSuperAdmin.js",
+    "start": "lerna run start --parallel"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "lerna": "^3.22.1",
+    "lint-staged": "^11.1.0",
+    "prettier": "^2.1.2"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx,md,json,html}": [
+      "prettier --write"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "resolutions": {
+    "buffer-equal-constant-time": "1.0.1"
+  }
+}
