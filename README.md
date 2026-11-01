@@ -4,6 +4,8 @@
 
 <h1 align="center">Spotlight</h1>
 
+<p align="center">[![type-check](https://img.shields.io/github/actions/workflow/status/rahuldangeofficial/12-spotlight-interaction-platform/ci.yml?branch=main&style=flat-square&label=type-check)](https://github.com/rahuldangeofficial/12-spotlight-interaction-platform/actions/workflows/ci.yml)</p>
+
 <p align="center">
   <strong>An Open-Source Interaction Platform for Small Communities</strong>
 </p>
